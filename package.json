@@ -23,6 +23,7 @@
     "@asymmetrik/ngx-leaflet": "^8.1.0",
     "@asymmetrik/ngx-leaflet-draw": "^7.0.0",
     "@swimlane/ngx-charts": "^18.0.1",
+    "country-state-city": "^3.0.1",
     "leaflet": "^1.7.1",
     "leaflet-draw": "^1.0.4",
     "rxjs": "~6.6.0",

@@ -22,6 +22,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import {MatCardModule} from '@angular/material/card';
 import {MatGridListModule} from '@angular/material/grid-list';
+import { WeatherComponent } from './component/weather/weather.component';
 
 
 
@@ -34,7 +35,8 @@ import {MatGridListModule} from '@angular/material/grid-list';
     ChartsComponent,
     ReportComponent,
     HomeComponent,
-    NewsComponent
+    NewsComponent,
+    WeatherComponent
   ],
   imports: [
     BrowserModule,

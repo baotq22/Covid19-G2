@@ -34,10 +34,8 @@ export class MapComponent implements OnInit {
   layers: any = [];
   rediuSize: number = 0;
   country = '';
-  constructor(private service: Covid19Service) { }
-  ngOnChanges(changes: SimpleChanges): void {
-
-  }
+  constructor(private service: Covid19Service) {}
+  ngOnChanges(changes: SimpleChanges): void {}
   ngOnInit(): void {
     this.service.currentMessage.subscribe((message: string) => {
       this.country = message;
@@ -54,11 +52,10 @@ export class MapComponent implements OnInit {
       });
     });
 
-
     // this.changeView();
     this.service.getAll().subscribe((i: any) => {
       this.datas = i;
-      console.log(this.datas);
+      // console.log(this.datas);
 
       this.datas.forEach((e: any) => {
         if (e.confirmed <= 999999) {
@@ -82,26 +79,22 @@ export class MapComponent implements OnInit {
 
       // this.changeView();
     });
-
-
-
   }
 
   onMapReady(map: L.Map) {
     this.map = map;
-  };
+  }
   changeView() {
     this.map.panTo(new L.LatLng(40.737, -73.923));
   }
-  options =
-    {
-      layers: [
-        tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-          maxZoom: 18,
-          attribution: '...',
-        }),
-      ],
-      zoom: 5,
-      center: latLng(this.local1, this.local2),
-    };
+  options = {
+    layers: [
+      tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 18,
+        attribution: '...',
+      }),
+    ],
+    zoom: 5,
+    center: latLng(this.local1, this.local2),
+  };
 }
